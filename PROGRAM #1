@@ -1,0 +1,46 @@
+//Pujado Johna Patrick
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main() {
+  // Get thename and birthdate.
+  string name;
+  int birthYear, birthMonth, birthDay;
+
+  // Get the current date.  We'll use a fixed date here for simplicity.
+  int currentYear, currentMonth, currentDay;
+
+  // Ask for their name.
+  cout << "Enter your name: ";
+  getline(cin, name); 
+
+  // Ask for their birthdate.
+  cout << "Enter your birth year (YYYY): ";
+  cin >> birthYear;
+  cout << "Enter your birth month (MM): ";
+  cin >> birthMonth;
+  cout << "Enter your birth day (DD): ";
+  cin >> birthDay;
+
+  // Set the current date.
+  currentYear = 2025; 
+  currentMonth = 2;  
+  currentDay = 26;   
+
+  // Calculate the age.
+  int age = currentYear - birthYear;
+
+  // Adjust the age if the birthday hasn't happened yet this year.
+  if (currentMonth < birthMonth || (currentMonth == birthMonth && currentDay < birthDay)) {
+    age--;
+  }
+
+  // Show the name and age.
+  cout << "\nName: " << name << endl;
+  cout << "Age: " << age << endl;
+
+  return 0;
+}
