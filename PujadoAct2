@@ -1,0 +1,17 @@
+/* Activity 2
+John Patrick P. Pujado
+BSIT-1R*/
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int year;
+    cout << "Enter a year: ";
+    cin >> year;
+
+    cout << year << ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0) 
+        ? " is a leap year." : " is not a leap year.") << endl;
+
+    return 0;
+}
